@@ -36,7 +36,7 @@ For each question, the pipeline compares answers produced in multiple languages.
 | MKQA | Multilingual knowledge question answering | Tests reliability signals on knowledge-intensive questions |
 
 # Models and evaluation
-We evaluate both individual signals and combinations of features using:
+I evaluate both individual signals and combinations of features using:
 
 -Logistic regression as an interpretable baseline
 
@@ -49,10 +49,9 @@ On MGSM, cross-lingual consistency alone achieved a ROC-AUC of approximately 0.8
 Results should be interpreted within the evaluated datasets, languages, prompting procedure, and model configuration. They do not establish cross-lingual agreement as a universal correctness detector.
 # Project context
 
-This project was completed as a collaborative course project for Natural Language Processing for Computational Social Science at Johns Hopkins University.
+This project was completed as a course project for Deep Learning at Johns Hopkins University.
 
 # License
 
 The original code and documentation in this repository are available under the MIT License. Datasets, pretrained models, and other third-party resources are governed by their respective licenses and terms of use and are not relicensed by this repository.
 
-If this repository contains work created by multiple team members, confirm that all contributors agree to the selected license before publishing the code under it.
