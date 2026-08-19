@@ -1,8 +1,6 @@
 # Cross-Lingual Consistency for LLM Reliability
 
-Can agreement across languages help identify when a large language model is likely to be correct?
-
-This project investigates **cross-lingual answer consistency as a reliability signal for LLM outputs**. We compare agreement across languages with monolingual self-consistency and enrich the analysis with multilingual semantic-similarity and natural language inference (NLI) features. Lightweight classifiers then use these signals to distinguish more reliable answers from less reliable ones.
+This project investigates **cross-lingual answer consistency as a reliability signal for LLM outputs**. I compare agreement across languages with monolingual self-consistency and enrich the analysis with multilingual semantic-similarity and natural language inference (NLI) features. Lightweight classifiers then use these signals to distinguish more reliable answers from less reliable ones.
 
 ## Why this matters
 
@@ -18,15 +16,6 @@ Cross-lingual agreement is **not a guarantee of correctness**—a model can repe
 4. How well do these signals generalize across multilingual reasoning and question-answering tasks?
 
 ## Method
-
-```mermaid
-flowchart TD
-    A["Multilingual benchmark questions"] --> B["Generate answers across languages"]
-    B --> C["Compute consistency signals"]
-    C --> D["Build similarity and NLI features"]
-    D --> E["Train reliability classifiers"]
-    E --> F["Evaluate with ROC-AUC and related metrics"]
-```
 
 For each question, the pipeline compares answers produced in multiple languages. The resulting features capture whether the answers agree lexically, semantically, or logically. Logistic regression and a multilayer perceptron (MLP) are used to test whether these features can predict answer reliability.
 
@@ -61,19 +50,7 @@ On **MGSM**, cross-lingual consistency alone achieved a **ROC-AUC of approximate
 
 Results should be interpreted within the evaluated datasets, languages, prompting procedure, and model configuration. They do not establish cross-lingual agreement as a universal correctness detector.
 
-## Reproducing the analysis
 
-The experimental workflow is:
-
-1. Prepare aligned multilingual examples from MGSM, XQuAD, and MKQA.
-2. Generate model answers for each language and repeated same-language trials.
-3. Normalize answers and compute cross-lingual and monolingual consistency scores.
-4. Encode answer pairs with LaBSE and obtain entailment/contradiction scores with an XLM-R-based NLI model.
-5. Assemble question-level features and correctness labels.
-6. Train logistic-regression and MLP classifiers.
-7. Evaluate on held-out data and compare feature groups using ROC-AUC.
-
-Exact commands, environment details, random seeds, and model identifiers should be documented alongside the corresponding scripts or notebooks in the repository so that reported results can be reproduced precisely.
 
 ## Limitations
 
@@ -86,10 +63,9 @@ Exact commands, environment details, random seeds, and model identifiers should 
 
 ## Project context
 
-This project was completed as a collaborative course project for **Natural Language Processing for Computational Social Science** at Johns Hopkins University.
+This project was completed as a course project for **Deep Learning** at Johns Hopkins University.
 
 ## License
 
 The original code and documentation in this repository are available under the [MIT License](LICENSE). Datasets, pretrained models, and other third-party resources are governed by their respective licenses and terms of use and are not relicensed by this repository.
 
-If this repository contains work created by multiple team members, confirm that all contributors agree to the selected license before publishing the code under it.
