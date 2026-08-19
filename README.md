@@ -8,14 +8,22 @@ Cross-lingual agreement is not a guarantee of correctness—a model can repeat t
 # Research questions
 
 1.Is cross-lingual consistency associated with answer correctness?
+
 2.Does it provide a stronger reliability signal than monolingual self-consistency?
+
 3.Do semantic-similarity and NLI features improve reliability prediction?
+
 4.How well do these signals generalize across multilingual reasoning and question-answering tasks?
 
 # Method
 flowchart TD
+
     A["Multilingual benchmark questions"] --> B["Generate answers across languages"]
+    
     B --> C["Compute consistency signals"]
+    
     C --> D["Build similarity and NLI features"]
+    
     D --> E["Train reliability classifiers"]
+    
     E --> F["Evaluate with ROC-AUC and related metrics"]
