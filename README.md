@@ -16,7 +16,7 @@ Cross-lingual agreement is not a guarantee of correctness—a model can repeat t
 4.How well do these signals generalize across multilingual reasoning and question-answering tasks?
 
 # Method
-flowchart TD
+
 
     A["Multilingual benchmark questions"] --> B["Generate answers across languages"]
     
