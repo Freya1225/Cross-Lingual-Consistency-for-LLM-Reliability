@@ -1,6 +1,6 @@
 # Cross-Lingual-Consistency-for-LLM-Reliability
 
-I compare agreement across languages with monolingual self-consistency and enrich the analysis with multilingual semantic-similarity and natural language inference (NLI) features. Lightweight classifiers then use these signals to distinguish more reliable answers from less reliable ones.
+This project investigates cross-lingual answer consistency as a reliability signal for LLM outputs. I compare agreement across languages with monolingual self-consistency and enrich the analysis with multilingual semantic-similarity and natural language inference (NLI) features. Lightweight classifiers then use these signals to distinguish more reliable answers from less reliable ones.
 # Why this matters
 
 Large language models can produce confident but incorrect answers. Standard confidence signals are often unavailable to end users and may not reflect whether an answer is factually correct. Cross-lingual prompting offers another perspective: if a model reaches semantically consistent answers when the same question is expressed in different languages, that agreement may provide evidence of reliability.
