@@ -27,3 +27,32 @@ flowchart TD
     D --> E["Train reliability classifiers"]
     
     E --> F["Evaluate with ROC-AUC and related metrics"]
+For each question, the pipeline compares answers produced in multiple languages. The resulting features capture whether the answers agree lexically, semantically, or logically. Logistic regression and a multilayer perceptron (MLP) are used to test whether these features can predict answer reliability.
+# Datasets
+| Dataset | Task | Role in the study |
+| --- | --- | --- |
+| MGSM | Mathematical Reasoning | Tests consistency on reasoning problems with verifiable numeric answers |
+| XQuAD | Cross-lingual extractive question answering | Tests multilingual consistency across parallel QA examples |
+| MKQA | Multilingual knowledge question answering | Tests reliability signals on knowledge-intensive questions |
+
+# Models and evaluation
+We evaluate both individual signals and combinations of features using:
+
+-Logistic regression as an interpretable baseline
+
+-A multilayer perceptron for nonlinear feature interactions
+
+-ROC-AUC as the primary ranking metric, supplemented by standard classification metrics where appropriate
+# Key result
+On MGSM, cross-lingual consistency alone achieved a ROC-AUC of approximately 0.839 in our experimental setup and outperformed the corresponding monolingual self-consistency signal. This result suggests that multilingual agreement can provide useful information about answer reliability, even without access to a model's internal probabilities.
+
+Results should be interpreted within the evaluated datasets, languages, prompting procedure, and model configuration. They do not establish cross-lingual agreement as a universal correctness detector.
+# Project context
+
+This project was completed as a collaborative course project for Natural Language Processing for Computational Social Science at Johns Hopkins University.
+
+# License
+
+The original code and documentation in this repository are available under the MIT License. Datasets, pretrained models, and other third-party resources are governed by their respective licenses and terms of use and are not relicensed by this repository.
+
+If this repository contains work created by multiple team members, confirm that all contributors agree to the selected license before publishing the code under it.
