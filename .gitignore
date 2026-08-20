@@ -1,0 +1,22 @@
+# Secrets
+.env
+.env.*
+*.key
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Raw datasets
+mgsm_en.tsv
+mgsm_zh.tsv
+mgsm_es.tsv
+mkqa.jsonl.gz
+
+# Full generated outputs
+g24_full_multilingual_data.json
+g24_final_results_groq*.json
+
