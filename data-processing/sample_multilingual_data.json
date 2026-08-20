@@ -1,0 +1,38 @@
+[
+  {
+    "id": "mgsm_000",
+    "type": "MGSM",
+    "ground_truth": "18",
+    "languages": {
+      "en": {
+        "question": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+        "prompt": "Solve this math problem. Answer with only the final number: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+        "model_output": [
+          "22",
+          "22",
+          "22"
+        ],
+        "is_correct": false
+      },
+      "zh": {
+        "question": "珍妮特的鸭子每天下 16 颗蛋。她每天早上早餐时吃 3 颗，每天用 4 颗为自己的朋友做松饼。剩下的鸭蛋她每天拿去农贸市场卖，每颗新鲜鸭蛋卖 2 美元。她每天在农贸市场赚多少钱？",
+        "prompt": "解决这个数学问题。只回答最终数字：珍妮特的鸭子每天下 16 颗蛋。她每天早上早餐时吃 3 颗，每天用 4 颗为自己的朋友做松饼。剩下的鸭蛋她每天拿去农贸市场卖，每颗新鲜鸭蛋卖 2 美元。她每天在农贸市场赚多少钱？",
+        "model_output": [
+          "答案是 18。",
+          "26",
+          "26"
+        ],
+        "is_correct": true
+      },
+      "es": {
+        "question": "Los patos de Janet ponen 16 huevos por día. Ella come tres en el desayuno todas las mañanas y usa cuatro para hornear magdalenas para sus amigos todos los días. Vende lo que sobra en el mercado de productores diariamente a $2 el huevo fresco de pato. ¿Cuánto gana en dólares todos los días en el mercado de productores?",
+        "prompt": "Resuelve este problema matemático. Responde solo con el número final: Los patos de Janet ponen 16 huevos por día. Ella come tres en el desayuno todas las mañanas y usa cuatro para hornear magdalenas para sus amigos todos los días. Vende lo que sobra en el mercado de productores diariamente a $2 el huevo fresco de pato. ¿Cuánto gana en dólares todos los días en el mercado de productores?",
+        "model_output": [
+          "Respuesta: 22",
+          "Respuesta: 22",
+          "Respuesta: 22"
+        ],
+        "is_correct": false
+      }
+    }
+  },
